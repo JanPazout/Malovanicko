@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Paint</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<header>
+    <h1>Simple Paint</h1>
+</header>
+
+<nav>
+    <div>
+        <label for="brush-size">Brush Size:</label>
+        <input type="range" id="brush-size" min="1" max="50" value="10">
+    </div>
+
+    <div>
+        <label for="color-picker">Color:</label>
+        <input type="color" id="color-picker" value="#000000">
+    </div>
+
+    <button onclick="paintApp.clearCanvas()">Clear Canvas</button>
+    <button onclick="paintApp.saveImage()">Save Image</button>
+</nav>
+
+<canvas id="paintCanvas" width="800" height="600"></canvas>
+
+<script src="script.js"></script>
 
 </body>
 </html>
